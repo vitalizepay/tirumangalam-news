@@ -1,170 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ta">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tirumangalam News - Latest news from Madurai District. Real-time updates on TN Elections 2026, Sathankulam Verdict, and local events.">
-    <title>Tirumangalam News | Madurai's No.1 Local News Portal</title>
+    <meta name="description" content="திருமங்கலம் செய்திகள் - மதுரை மாவட்டத்தின் உடனுக்குடன் செய்திகள். தேர்தல் 2026, சாத்தான்குளம் தீர்ப்பு மற்றும் உள்ளூர் தகவல்கள்.">
+    <title>திருமங்கலம் செய்திகள் | மதுரையின் முன்னணி செய்தி தளம்</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;600;700&display=swap');
         
-        :root {
-            --primary: #c8102e;
-        }
-        
-        .tail-container * {
-            font-family: 'Inter', system-ui, sans-serif;
-        }
-        
-        .logo-font {
-            font-family: 'Playfair Display', serif;
+        body {
+            font-family: 'Hind Madurai', sans-serif;
         }
 
         .hero-bg {
-            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&q=80&w=2000');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&q=80&w=2000');
             background-size: cover;
             background-position: center;
         }
 
-        .news-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .news-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        .live-dot {
+            animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: .5; }
-        }
-        .live-dot {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
         }
     </style>
 </head>
-<body class="tail-container bg-slate-50">
+<body class="bg-gray-50">
+
     <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-[#c8102e] rounded-xl flex items-center justify-center text-white text-2xl shadow-lg">
+                <div class="w-10 h-10 bg-[#c8102e] rounded-xl flex items-center justify-center text-white text-2xl">
                     <i class="fa-solid fa-newspaper"></i>
                 </div>
                 <div>
-                    <h1 class="logo-font text-2xl md:text-3xl font-bold text-[#c8102e]">Tirumangalam News</h1>
-                    <p class="text-[10px] text-gray-500 tracking-[2px] uppercase">Madurai • Tamil Nadu</p>
-                </div>
-            </div>
-
-            <div class="hidden lg:flex items-center gap-8 text-sm font-semibold text-gray-700">
-                <a href="#" class="text-[#c8102e]">Home</a>
-                <a href="#" class="hover:text-[#c8102e] transition-colors">Elections 2026</a>
-                <a href="#" class="hover:text-[#c8102e] transition-colors">Madurai City</a>
-                <a href="#" class="hover:text-[#c8102e] transition-colors">Crime</a>
-                <a href="#" class="hover:text-[#c8102e] transition-colors">Culture</a>
-            </div>
-
-            <div class="flex items-center gap-4">
-                <div class="hidden sm:flex items-center gap-1.5 bg-red-100 text-red-700 text-[10px] font-bold px-3 py-1 rounded-full">
-                    <div class="w-2 h-2 bg-red-600 rounded-full live-dot"></div>
-                    LIVE UPDATES
-                </div>
-                <button onclick="toggleMobileMenu()" class="lg:hidden text-2xl"><i class="fa-solid fa-bars"></i></button>
-            </div>
-        </div>
-        <div id="mobileMenu" class="hidden lg:hidden p-6 bg-white border-t">
-            <a href="#" class="block py-2 font-medium">TN Elections 2026</a>
-            <a href="#" class="block py-2 font-medium">Local News</a>
-            <a href="#" class="block py-2 font-medium">Contact Us</a>
-        </div>
-    </nav>
-
-    <header class="hero-bg text-white py-16 md:py-24">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="max-w-3xl">
-                <span class="inline-block bg-red-600 text-xs font-bold px-3 py-1 rounded mb-4">BREAKING NEWS</span>
-                <h1 class="text-4xl md:text-6xl font-bold leading-tight logo-font mb-6 uppercase">
-                    Death Penalty for 9 Cops in Sathankulam Case
-                </h1>
-                <p class="text-lg md:text-xl text-gray-200 mb-8">
-                    Madurai Court delivers a historic verdict in the 2020 custodial death case. "A clear abuse of authority," says the Judge.
-                </p>
-                <div class="flex flex-wrap gap-4 items-center">
-                    <button class="bg-white text-[#c8102e] font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition-all">
-                        READ FULL REPORT
-                    </button>
-                    <span class="text-sm text-gray-300"><i class="fa-solid fa-clock mr-2"></i>Updated 1 hour ago</span>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main class="max-w-7xl mx-auto px-6 py-12">
-        <div class="flex items-center justify-between mb-10 border-b pb-4">
-            <h2 class="text-2xl font-bold text-gray-800">Top Stories Today</h2>
-            <span class="text-sm font-medium text-gray-500 uppercase tracking-widest">April 09, 2026</span>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="news-card bg-white rounded-2xl overflow-hidden shadow-sm border">
-                <div class="h-48 bg-gray-200 relative">
-                    <img src="https://images.unsplash.com/photo-1590247813693-5541d1c609fd?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
-                    <span class="absolute top-4 left-4 bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded">POLITICS</span>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-bold text-xl mb-3 leading-tight">TN Election 2026: Tirumangalam Scrutiny Complete</h3>
-                    <p class="text-gray-600 text-sm mb-4">Nominations of R.B. Udhayakumar and M. Manimaran accepted. Withdrawal deadline ends today at 3:00 PM.</p>
-                    <a href="#" class="text-[#c8102e] font-semibold text-sm">Details →</a>
-                </div>
-            </div>
-
-            <div class="news-card bg-white rounded-2xl overflow-hidden shadow-sm border">
-                <div class="h-48 bg-gray-200 relative">
-                    <img src="https://images.unsplash.com/photo-1571439270193-1fd957ac70e5?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
-                    <span class="absolute top-4 left-4 bg-purple-600 text-white text-[10px] font-bold px-2 py-1 rounded">TVK PARTY</span>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-bold text-xl mb-3 leading-tight">Vijay's TVK Files Nomination in Thirupparankundram</h3>
-                    <p class="text-gray-600 text-sm mb-4">A major three-way contest emerges in Madurai District as TVK enters the electoral field for the first time.</p>
-                    <a href="#" class="text-[#c8102e] font-semibold text-sm">Details →</a>
-                </div>
-            </div>
-
-            <div class="news-card bg-white rounded-2xl overflow-hidden shadow-sm border">
-                <div class="h-48 bg-gray-200 relative">
-                    <img src="https://images.unsplash.com/photo-1541913080-214307cc3ef9?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
-                    <span class="absolute top-4 left-4 bg-green-600 text-white text-[10px] font-bold px-2 py-1 rounded">LOCAL</span>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-bold text-xl mb-3 leading-tight">Madurai District Prepares for Summer Heat</h3>
-                    <p class="text-gray-600 text-sm mb-4">Local administration issues heatwave advisory as temperatures in Tirumangalam reach 41°C.</p>
-                    <a href="#" class="text-[#c8102e] font-semibold text-sm">Details →</a>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer class="bg-gray-900 text-gray-400 py-12 px-6">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="logo-font text-2xl text-white mb-4">Tirumangalam News</h2>
-            <p class="text-sm mb-6">Serving the people of Madurai District with integrity since 2024.</p>
-            <div class="flex justify-center gap-6 text-xl mb-8 text-white">
-                <i class="fa-brands fa-whatsapp"></i>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-x-twitter"></i>
-            </div>
-            <p class="text-[10px] uppercase tracking-widest">© 2026 Tirumangalam News Portal • All Rights Reserved</p>
-        </div>
-    </footer>
-
-    <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        }
-    </script>
-</body>
-</html>
+                    <h1 class="text-2xl font-bold text-[#c8102e]">திருமங்கலம் செய்திகள்</h1>
+                    <p class="text-[10px] text-gray-500 tracking-widest uppercase">மது
